@@ -1,3 +1,5 @@
+![AWS Resources](https://github.com/arbon/aws-stacks/blob/main/docs/aws-stacks.png?raw=true)
+
 # AWS Stacks
 
 This is an [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) project written in TypeScript to define AWS infrastructure. It defines a number of _stacks_ used to create and deploy resources ([S3 Buckets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html), [SNS Topics](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html), etc.) via [AWS CloudFormation Templates](https://aws.amazon.com/cloudformation/resources/templates/). It explores inheritance to share stack resources and standards.
