@@ -1,0 +1,54 @@
+{
+  "name": "aws-stacks",
+  "version": "1.0.0",
+  "author": "Zach Arbon",
+  "repository": {
+    "url": "https://github.com/arbon/aws-stacks",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "cdk": "cdk",
+    "clean": "rimraf cdk.out",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy",
+    "diff": "npm run cdk -- diff",
+    "docs": "typedoc ./lib --out cdk.out/docs",
+    "lint": "eslint ./lib ./test",
+    "list-resources": "ts-node bin/list-resources.ts",
+    "prebuild": "npm run lint",
+    "presynth": "npm run clean",
+    "synth": "npm run cdk -- synth",
+    "test": "jest --verbose",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.11.25",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "aws-cdk": "2.131.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.25.11",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.131.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended"
+    ]
+  },
+  "private": true
+}
